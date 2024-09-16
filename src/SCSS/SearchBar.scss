@@ -1,0 +1,23 @@
+.search-bar {
+    position: relative;
+    margin: 10px;
+  
+    input {
+      padding: 8px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 30px; // Espace pour le bouton de fermeture
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+  
