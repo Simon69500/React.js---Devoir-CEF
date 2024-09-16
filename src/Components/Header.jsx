@@ -9,11 +9,9 @@ import Logo from "../assets/img/Logo.png";
 const Header = () => {
     const [filteredArtisans, setFilteredArtisans] = useState([]);
     const [isSearchVisible, setSearchVisible] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('');
 
     // Fonction de filtrage des artisans
     const handleChange = (term) => {
-        setSearchTerm(term);
         if (term.trim() === '') {
             setFilteredArtisans([]);
             return;

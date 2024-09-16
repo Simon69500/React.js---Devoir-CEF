@@ -14,11 +14,7 @@ const SearchModal = ({ isVisible, onSearch, onClose, filteredArtisans }) => {
     <div className="search-modal">
       <div className="search-modal-content">
         <button className="close-btn" onClick={onClose}>X</button>
-        <input
-          type="text"
-          onChange={handleChange}
-          placeholder="Rechercher un artisan..."
-        />
+        <input type="text" onChange={handleChange} placeholder="Rechercher un artisan..." />
         {filteredArtisans.length > 0 && (
           <div className="search-results">
             <ul>
