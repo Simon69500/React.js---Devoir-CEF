@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BurgerMenu from "./MenuBurger";
 import SearchModal from "../Components/SearchModal";
-import { artisans } from "../Components/Entreprise";
+import data from '../datas.json';
 import '../SCSS/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from "../assets/img/Logo.png";
@@ -16,10 +16,10 @@ const Header = () => {
             setFilteredArtisans([]);
             return;
         }
-        const filtered = artisans.filter((artisan) => 
-            artisan.nom.toLowerCase().includes(term.toLowerCase()) ||
-            artisan.specialite.toLowerCase().includes(term.toLowerCase()) ||
-            artisan.ville.toLowerCase().includes(term.toLowerCase())
+        const filtered = data.filter((artisan) => 
+            artisan.name.toLowerCase().includes(term.toLowerCase()) ||
+            artisan.specialty.toLowerCase().includes(term.toLowerCase()) ||
+            artisan.location.toLowerCase().includes(term.toLowerCase())
         );
         setFilteredArtisans(filtered);
     };
@@ -47,7 +47,7 @@ const Header = () => {
                 onSearch={handleChange} 
                 isVisible={isSearchVisible} 
                 onClose={closeSearch} 
-                filteredArtisans={filteredArtisans} 
+                filteredData={filteredArtisans} 
             />
             <div className="burger-menu"> 
                 <BurgerMenu />

@@ -1,23 +1,19 @@
-import '../SCSS/SearchBar.scss'
-import React, {useState} from 'react';
+import React from 'react';
 
-const SearchBar = ({onSearch, isVisible, onClose}) => {
-    const [searchTerm, setSearchTerm] = useState('');
-
+const SearchBar = ({ searchTerm, onSearchChange }) => {
+    
     const handleChange = (event) => {
-        const term = event.target.value.toLowerCase();
-        setSearchTerm(term);
-        onSearch(term);
+        onSearchChange(event.target.value);
     };
 
-    if (!isVisible) {
-        return null;
-    }
-
     return (
-        <div id="search-bar">
-            <button className="close-btn" onClick={onClose}>X</button>
-            <input type="text" value={searchTerm} onChange={handleChange} placeholder="Rechercher un artisan..." />
+        <div className="search-bar">
+            <input
+                type="text"
+                placeholder="Rechercher un artisan..."
+                value={searchTerm} 
+                onChange={handleChange} 
+            />
         </div>
     );
 };

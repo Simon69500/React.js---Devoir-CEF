@@ -1,23 +1,54 @@
-.search-bar {
+@media (max-width:932px){
+  .search-bar {
     position: relative;
-    margin: 10px;
+    width: 70%;
   
     input {
-      padding: 8px;
-      font-size: 16px;
       width: 100%;
-      box-sizing: border-box;
-      padding-right: 30px; // Espace pour le bouton de fermeture
-    }
+      padding: 12px 20px;               
+      font-size: 16px;                 
+      border: 2px solid #0074c7;         
+      border-radius: 25px;           
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      outline: none;                    
+      transition: all 0.3s ease;       
   
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-size: 16px;
+      &:focus {
+        border-color: #82b864;         
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);  
+      }
+  
+      &::placeholder {
+        color: #82b864;                   
+        font-style: italic;            
     }
   }
-  
+  }
+}
+
+.search-bar {
+  position: relative;
+  width: 70%;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    padding: 12px 20px;               
+    font-size: 16px;                 
+    border: 2px solid #0074c7;         
+    border-radius: 25px;           
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    outline: none;                    
+    transition: all 0.3s ease;       
+
+    &:focus {
+      border-color: #82b864;         
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);  
+    }
+
+    &::placeholder {
+      color: #82b864;                   
+      font-style: italic;            
+  }
+}
+}

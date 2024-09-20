@@ -1,0 +1,149 @@
+#home {
+    display: flex;
+    flex-direction:column ;
+
+    .tuturial {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        color: #00497c;
+    }
+    
+    .etape {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .number {
+            order: 1;
+            color: #0074c7;
+            border: solid #00497c 2px ;
+            border-radius: 50%;
+
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            order: 2;
+            border: solid #00497c 2px ;
+            border-radius: 10%;
+
+            width: 150px;
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+    }
+
+    @media (max-width: 932px){
+
+        // Partie Comment trouver son artisan 
+        .tuturial {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                color: #00497c;
+            }
+    
+            .etape {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+    
+                .number {
+                    order: 1;
+                    color: #0074c7;
+                    border: solid #00497c 2px ;
+                    border-radius: 50%;
+    
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                p {
+                    order: 2;
+                    border: solid #00497c 2px ;
+                    border-radius: 10%;
+    
+                    width: 150px;
+                    height: 150px;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    
+                }
+    
+            }
+        }
+        
+        // Partie Trouve ton artisan
+        #artisan {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 30px;
+
+            h2 {
+                color: #00497c;
+            }
+
+            .section {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .slider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+              }
+              
+              button {
+                background-color: transparent;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #0074c7;
+              }
+              
+              .card {
+                width: 300px;
+                padding: 20px;
+
+                border: solid #00497c 2px;
+                border-radius: 10px;
+
+                text-align: center;
+                transition: transform 0.5s ease;
+              }
+        }
+    }
+}

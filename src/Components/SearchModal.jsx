@@ -1,7 +1,8 @@
 import React from 'react';
 import '../SCSS/SearchModal.scss'; 
 
-const SearchModal = ({ isVisible, onSearch, onClose, filteredArtisans }) => {
+
+const SearchModal = ({ isVisible, onSearch, onClose, filteredData }) => {
   const handleChange = (event) => {
     onSearch(event.target.value.toLowerCase());
   };
@@ -15,18 +16,18 @@ const SearchModal = ({ isVisible, onSearch, onClose, filteredArtisans }) => {
       <div className="search-modal-content">
         <button className="close-btn" onClick={onClose}>X</button>
         <input type="text" onChange={handleChange} placeholder="Rechercher un artisan..." />
-        {filteredArtisans.length > 0 && (
+        {filteredData.length > 0 && (
           <div className="search-results">
             <ul>
-              {filteredArtisans.map((artisan) => (
-                <li key={artisan.id}>
-                  {artisan.nom} - {artisan.specialite} - {artisan.ville}
+              {filteredData.map((data) => (
+                <li key={data.id}>
+                  {data.name} - {data.specialty} - {data.location}
                 </li>
               ))}
             </ul>
           </div>
         )}
-        {filteredArtisans.length === 0 && (
+        {filteredData.length === 0 && (
           <p className="no-results">Aucun artisan trouvé</p>
         )}
       </div>
