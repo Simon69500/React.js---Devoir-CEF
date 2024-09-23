@@ -1,0 +1,113 @@
+@media (max-width: 932px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card-artisan {
+            display: flex;
+            flex-direction: column;
+
+            background-color: #f1f8fc;
+            border: solid 3px #82b864;
+            border-radius: 10px;
+            box-shadow:  4px 4px 8px 4px rgba(16, 7, 136, 0.199);
+            margin: 10px 10px 20px 10px;
+                
+        }
+
+        .Text-artisan {
+            font-size: medium;
+            margin: 6px 5px;
+            color:#0074c7;
+
+            .artisan-text {
+                    color: #384050;
+                    font-size: 18px;
+                }
+        }
+
+
+        .Text-about {
+            font-size: medium;
+            margin: 20px 5px;
+
+                .about-text {
+                    font-size: small;
+                    margin: 10px 5px;
+                    text-indent: 20px;
+                }
+        }
+
+
+        h3 {
+            margin: 5px 5px;
+            font-size: x-large;
+            color: #384050;
+        }
+
+        .website {
+            margin: 15px 5px;
+            text-decoration: none;
+            font-size: medium;
+            color: #384050;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .card-artisan {
+        display: flex;
+        flex-direction: column;
+
+        background-color: #f1f8fc;
+        border: solid 3px #82b864;
+        border-radius: 10px;
+        box-shadow:  4px 4px 8px 4px rgba(16, 7, 136, 0.199);
+        margin: 10px 10px 20px 10px;
+            
+    }
+
+    .Text-artisan {
+        font-size: medium;
+        margin: 6px 5px;
+        color:#0074c7;
+
+        .artisan-text {
+                color: #384050;
+                font-size: 18px;
+            }
+    }
+
+
+    .Text-about {
+        font-size: medium;
+        margin: 20px 5px;
+
+            .about-text {
+                font-size: small;
+                margin: 10px 5px;
+                text-indent: 20px;
+            }
+    }
+
+
+    h3 {
+        margin: 5px 5px;
+        font-size: x-large;
+        color: #384050;
+    }
+
+    .website {
+        margin: 15px 5px;
+        text-decoration: none;
+        font-size: medium;
+        color: #384050;
+    }
+}

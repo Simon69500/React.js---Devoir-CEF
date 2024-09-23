@@ -7,6 +7,7 @@ import "../SCSS/List-Artisan.scss";
 
 import { createStars } from "../fontAwesomeConfig";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const List = () => {
 
@@ -38,14 +39,25 @@ const List = () => {
             <div className="artisans">
                 {filteredData.length > 0 ? (
                     filteredData.map((data) => (
-                        <div key={data.id} className="list-artisan">
+                        <Link  key={data.id} to={`/artisan/${data.id}`} className="list-artisan">
+                        <div>
                             <h3>{data.name}</h3>
-                            <p><strong>spécialité :</strong> {data.specialty}</p>
-                            <p><strong>Localisation :</strong>{data.location}</p>
+
+                            <p className="text">
+                                <strong>spécialité : </strong>
+                                <span className="text-data">{data.specialty}</span>
+                            </p>
+
+                            <p className="text">
+                                <strong>Localisation : </strong>
+                                <span className="text-data"> {data.location}</span>
+                            </p>
+                            
                             <div className="rating">
                                 {createStars(data.note)}
                             </div>
                         </div>
+                        </Link>    
                     ))
                 ) : (
                     <p>Aucun artisan trouvé.</p>

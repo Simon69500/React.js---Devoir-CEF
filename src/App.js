@@ -17,11 +17,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}>Acceuil</Route>
           <Route path='/List' element={<List/>}>Liste des Artisans</Route>
-          <Route path='/Artisan' element={<Artisan/>}>Mes Artisans</Route>
           <Route path='/Mentions' element={<Mentions/>}>Mentions légales</Route>
           <Route path='/Data' element={<Data/>}>Données personelles</Route>
           <Route path='/Cookies' element={<Cookies/>}>Cookies</Route>
           <Route path='/Acces' element={<Acces/>}>Accesibilités</Route>
+          <Route path='/Artisan/:id' element={<Artisan/>} />
         </Routes>
       </nav>
     </div>
