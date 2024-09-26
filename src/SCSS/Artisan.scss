@@ -1,3 +1,5 @@
+// CSS pour format Mobile
+
 @media (max-width: 932px) {
     .main {
         display: flex;
@@ -56,13 +58,14 @@
     }
 }
 
+// CSS pour format Desktop
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .card-artisan {
+    .artisan-detail {
         display: flex;
         flex-direction: column;
 
@@ -98,7 +101,7 @@
     }
 
 
-    h3 {
+    h2 {
         margin: 5px 5px;
         font-size: x-large;
         color: #384050;

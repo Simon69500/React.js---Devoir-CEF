@@ -23,9 +23,10 @@ const BurgerMenu = () => {
             </button>
 
             <nav className={`menu ${isOpen ? 'open' : ''}`}>
-                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/" end >Accueil</NavLink>
-                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/List" >Liste des Artisans</NavLink>
-                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Artisan" >Fiche Artisan</NavLink>
+                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Bâtiment/category/Bâtiment" end >Bâtiment</NavLink>
+                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Services/category/Services" >Services</NavLink>
+                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Fabrication/category/Fabrication" >Fabrication</NavLink>
+                <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Alimentation/category/Alimentation" >Alimentation</NavLink>
             </nav>
         </div>
     );

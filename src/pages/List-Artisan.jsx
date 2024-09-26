@@ -7,15 +7,17 @@ import "../SCSS/List-Artisan.scss";
 
 import { createStars } from "../fontAwesomeConfig";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const List = () => {
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [filteredData, setFilteredData] = useState([]);
+    const {id} = useParams();
 
+    const [searchTerm, setSearchTerm] = useState("");
+    const [filteredData, setFilteredData] = useState(data);
+
+// Filtrer les artisans en fonction du terme de recherche
     useEffect(() => {
-        // Filtrer les artisans en fonction du terme de recherche
         const filtered = data.filter(data =>
             data.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
             data.specialty.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
@@ -24,6 +26,16 @@ const List = () => {
         );
         setFilteredData(filtered);
     }, [searchTerm]);
+
+// Utilisez l'ID pour faire défiler jusqu'à l'artisan correspondant
+    useEffect(() => {
+        if (id) {
+            const artisanElement = document.getElementById(id);
+            if (artisanElement) {
+                artisanElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+    }, [id,filteredData]);
 
     return (
         <div id="List-Artisan">
@@ -39,7 +51,12 @@ const List = () => {
             <div className="artisans">
                 {filteredData.length > 0 ? (
                     filteredData.map((data) => (
-                        <Link  key={data.id} to={`/artisan/${data.id}`} className="list-artisan">
+                        <Link
+                        key={data.id}
+                        to={`/artisan/${data.id}`}
+                        className={`list-artisan ${id === String(data.id) ? 'selected' : ''}`} // Ajout de la classe conditionnelle
+                        id={data.id}
+                    >
                         <div>
                             <h3>{data.name}</h3>
 
