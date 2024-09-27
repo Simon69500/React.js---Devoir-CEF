@@ -10,7 +10,7 @@ const BurgerMenu = () => {
     };
 
     return (
-        <div id="burger-menu">
+        <main id="menu">
             <button 
                 className="burger-icon" 
                 onClick={toggleMenu} 
@@ -22,13 +22,13 @@ const BurgerMenu = () => {
                 <div className="line"></div>
             </button>
 
-            <nav className={`menu ${isOpen ? 'open' : ''}`}>
+            <nav className={`menu-detail ${isOpen ? 'open' : ''}`}>
                 <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Bâtiment/category/Bâtiment" end >Bâtiment</NavLink>
                 <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Services/category/Services" >Services</NavLink>
                 <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Fabrication/category/Fabrication" >Fabrication</NavLink>
                 <NavLink className={({ isActive }) => `menu_1 ${isActive ? 'active' : ''}`} to="/Alimentation/category/Alimentation" >Alimentation</NavLink>
             </nav>
-        </div>
+        </main>
     );
 };
 

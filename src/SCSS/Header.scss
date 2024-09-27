@@ -1,31 +1,5 @@
-#header {
-    display: flex;
-    justify-content: space-between; /* Espace les éléments entre eux */
-    align-items: center; /* Aligne verticalement au centre */
-    background-color: #f1f8fc;
-    padding: 10px 20px; /* Espace autour des éléments */
 
-    .logo-img {
-        width: 150px;
-        height: auto; /* Maintient le ratio de l'image */
-    }
-
-    .search-icon {
-        cursor: pointer;
-        font-size: 24px; /* Ajuste la taille de l'icône */
-        margin: 0 20px; /* Marge à gauche et à droite */
-    }
-
-    .burger-menu {
-        display: flex;
-        align-items: center;
-    }
-
-    @media (max-width: 932px) {
-        /* Styles pour les petits écrans */
-        flex-direction: row; /* Assure que les éléments restent en ligne */
-        justify-content: space-between; /* Espace les éléments */
-        align-items: center; /* Aligne les éléments verticalement */
+    @media (max-width: 430px) {
 
         .logo-img {
             width: 120px; /* Ajuste la taille de l'image */
@@ -38,5 +12,64 @@
         .burger-menu {
             margin-left: 0; /* Retire la marge gauche pour les petits écrans */
         }
+
+        #header {
+            display: flex;
+            justify-content: space-between; /* Espace les éléments entre eux */
+            align-items: center; /* Aligne verticalement au centre */
+            background-color: #f1f8fc;
+            padding: 10px 20px; /* Espace autour des éléments */
+        
+            .logo-img {
+                width: 150px;
+                height: auto; /* Maintient le ratio de l'image */
+            }
+        
+            .search-icon {
+                cursor: pointer;
+                font-size: 24px; /* Ajuste la taille de l'icône */
+                margin: 0 20px; /* Marge à gauche et à droite */
+            }
+        
+            .burger-menu {
+                display: flex;
+                align-items: center;
+        
+                width: 50px;
+            }
     }
+}
+
+@media (min-width: 768px) {
+
+    #header {
+        display: flex;
+        align-items: center; 
+        background-color: #f1f8fc;
+
+    
+        .logo-img {
+            width: 150px;
+            height: auto;
+            padding-left: 50px;
+        }
+    
+        .search-icon {
+            display: flex;
+            justify-content: end;
+            align-items: flex-end;
+
+            width: 500px;
+            margin-left: 500px;
+            color:#00497c;
+            cursor: pointer;
+            font-size: 30px; 
+            
+        }
+    
+        .burger-menu {
+            width: 700px;
+        }
+
+}
 }

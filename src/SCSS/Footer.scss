@@ -1,23 +1,15 @@
-#footer {
-    #footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        background-color:#82b864 ;
-        width: 100%;
-        height: 200px;
-        }
+// Format Mobile
+    @media (max-width: 430px) {
 
-    @media (max-width: 932px) {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        background-color:#82b864 ;
-        width: 100%;
-        height: 200px;
+        #footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        
+            background-color:#82b864 ;
+            width: 100%;
+            height: 200px;
+            }
 
         .logo-img {
             width: 150px;
@@ -47,4 +39,66 @@
             color: black;
         }
     }
+
+// Format Desktop
+@media (min-width: 730px) {
+
+    #footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+        background-color:#82b864 ;
+        width: 100%;
+        height: 220px;
+        }
+
+    // Partie Logo
+    .logo-img {
+        width: 150px;
+        height: 100px;
+       
+    }
+    // Partie Adresse 
+    .adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+
+    p {
+        margin-top: 0;
+    }
+
+    h4 {
+        margin-top: 0px;
+        color:#0074c7 ;
+    }
+ }
+
+    // Partie Pages légales
+    .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 200px;
+    height: 200px;
+    padding-bottom: 20px;
+
+    .link{
+        text-decoration:none;
+        color: black;
+    }
+
+    h4 {
+        margin-bottom: 0px;
+        color:#0074c7 ;
+    }
+
+  }
+
 }
