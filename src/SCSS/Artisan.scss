@@ -1,116 +1,131 @@
-// CSS pour format Mobile
+@import "Varaibles.scss";
 
-@media (max-width: 932px) {
+// CSS pour format Mobile
+@media (max-width: 430px) {
+    #artisan {
+        font-family: Graphik, sans-serif;
+        
+        h1 {
+            color: $bleu;
+            font-size: xxx-large;
+            padding: 10px;
+        }
+    }
+
     .main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .card-artisan {
+        .artisan-detail {
             display: flex;
             flex-direction: column;
+            text-align: center;
 
-            background-color: #f1f8fc;
-            border: solid 3px #82b864;
+            background-color: $Background1;
+            border: solid 3px $vert;
             border-radius: 10px;
             box-shadow:  4px 4px 8px 4px rgba(16, 7, 136, 0.199);
             margin: 10px 10px 20px 10px;
                 
         }
 
-        .Text-artisan {
+        .text{
             font-size: medium;
             margin: 6px 5px;
-            color:#0074c7;
+            color:$bleu;
 
-            .artisan-text {
-                    color: #384050;
+            .text-data {
+                    color: $bleuFonce;
                     font-size: 18px;
                 }
         }
 
-
-        .Text-about {
-            font-size: medium;
-            margin: 20px 5px;
-
-                .about-text {
+                .text-about {
                     font-size: small;
                     margin: 10px 5px;
                     text-indent: 20px;
+                    color: $bleuFonce;
                 }
-        }
 
-
-        h3 {
-            margin: 5px 5px;
-            font-size: x-large;
-            color: #384050;
+        h2 {
+            margin: 10px 10px;
+            font-size: xx-large;
+            color: $vert;
         }
 
         .website {
             margin: 15px 5px;
             text-decoration: none;
             font-size: medium;
-            color: #384050;
+            color: $bleuFonce;
         }
     }
 }
 
 // CSS pour format Desktop
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (min-width: 730px) {
+    #artisan {
+        font-family: Graphik, sans-serif;
 
-    .artisan-detail {
+        h1 {
+            color: $bleu;
+            font-size: xxx-large;
+            padding: 10px;
+        }
+    }
+    
+    .main {
         display: flex;
         flex-direction: column;
-
-        background-color: #f1f8fc;
-        border: solid 3px #82b864;
-        border-radius: 10px;
-        box-shadow:  4px 4px 8px 4px rgba(16, 7, 136, 0.199);
-        margin: 10px 10px 20px 10px;
+        justify-content: center;
+        align-items: center;
+    
+        .artisan-detail {
+            display: flex;
+            flex-direction: column;
             
-    }
+            text-align: center;
+            background-color: $Background1;
+            border: solid 3px $vert;
+            border-radius: 10px;
+            box-shadow:  4px 4px 8px 4px rgba(16, 7, 136, 0.199);
+            margin: 10px 10px 20px 10px;
+                
+        }
+    
+        .text {
+            font-size: medium;
+            margin: 6px 5px;
+            color:$bleu;
+    
+            .text-data {
+                    color: $bleuFonce;
+                    font-size: 18px;
+                }
+            .text-about {
+                    font-size: small;
+                    margin: 10px 5px;
+                    text-indent: 20px;
+                    color: $bleuFonce;
 
-    .Text-artisan {
-        font-size: medium;
-        margin: 6px 5px;
-        color:#0074c7;
 
-        .artisan-text {
-                color: #384050;
-                font-size: 18px;
-            }
-    }
-
-
-    .Text-about {
-        font-size: medium;
-        margin: 20px 5px;
-
-            .about-text {
-                font-size: small;
-                margin: 10px 5px;
-                text-indent: 20px;
-            }
-    }
-
-
-    h2 {
-        margin: 5px 5px;
-        font-size: x-large;
-        color: #384050;
-    }
-
-    .website {
-        margin: 15px 5px;
-        text-decoration: none;
-        font-size: medium;
-        color: #384050;
+                }    
+        }   
+    
+        h2 {
+            margin: 5px 5px;
+            font-size: xx-large;
+            color: $vert;
+        }
+    
+        .website {
+            margin: 20px 10px;
+            text-decoration: none;
+            font-size: larger;
+            color: $bleuFonce;
+        }
     }
 }
+

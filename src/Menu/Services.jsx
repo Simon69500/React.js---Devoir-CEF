@@ -22,7 +22,7 @@ const Service = () => {
         <Header/>
         <main className="main-artisan">
 
-        <h1>Artisans dans la catégorie : <span className="title">{category}</span></h1>
+        <h1>Artisans dans la catégorie : <span className="title"><br/>{category}</span></h1>
             <ul className="card-artisan">
                 {filteredArtisan.length > 0 ? (
                     filteredArtisan.map(artisan => (

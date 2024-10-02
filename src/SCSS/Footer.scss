@@ -1,3 +1,5 @@
+@import "Varaibles.scss";
+
 // Format Mobile
     @media (max-width: 430px) {
 
@@ -5,15 +7,16 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        
-            background-color:#82b864 ;
+            
+            font-family: Graphik, sans-serif;
+            background-color:$Background2 ;
             width: 100%;
             height: 200px;
             }
 
-        .logo-img {
-            width: 150px;
-            height: 100px;
+        .logo-imgFooter {
+            width: 100px;
+            height: 80px;
             margin-top: 50px;
         }
     
@@ -22,8 +25,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        h4 {
+            margin-top: 0px;
+            color:$bleu ;
         }
-    
+        }
+        
         p {
             margin-top: 0;
         }
@@ -31,12 +39,18 @@
         .pages {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
+
+        h4 {
+            margin-top: 0px;
+            color:$bleu ;
+        }
+
         }
     
         .link{
             text-decoration:none;
-            color: black;
+            color: $bleuFonce;
         }
     }
 
@@ -48,14 +62,15 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-    
-        background-color:#82b864 ;
+        
+        font-family: Graphik, sans-serif;
+        background-color:$Background2  ;
         width: 100%;
         height: 220px;
         }
 
     // Partie Logo
-    .logo-img {
+    .logo-imgFooter {
         width: 150px;
         height: 100px;
        
@@ -75,7 +90,7 @@
 
     h4 {
         margin-top: 0px;
-        color:#0074c7 ;
+        color:$bleu ;
     }
  }
 
@@ -91,12 +106,12 @@
 
     .link{
         text-decoration:none;
-        color: black;
+        color: $bleuFonce;
     }
 
     h4 {
         margin-bottom: 0px;
-        color:#0074c7 ;
+        color:$bleu ;
     }
 
   }

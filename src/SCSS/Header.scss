@@ -1,34 +1,34 @@
+@import "Varaibles.scss";
 
     @media (max-width: 430px) {
-
-        .logo-img {
-            width: 120px; /* Ajuste la taille de l'image */
-        }
-
+       
         .search-icon {
-            font-size: 20px; /* Ajuste la taille de l'icône pour les petits écrans */
+            font-size: 20px; 
         }
 
         .burger-menu {
-            margin-left: 0; /* Retire la marge gauche pour les petits écrans */
+            margin-left: 0; 
         }
 
         #header {
             display: flex;
-            justify-content: space-between; /* Espace les éléments entre eux */
-            align-items: center; /* Aligne verticalement au centre */
-            background-color: #f1f8fc;
-            padding: 10px 20px; /* Espace autour des éléments */
-        
+            justify-content: space-between; 
+            align-items: center;
+            background-color: $Background1;
+            padding: 10px 20px;
+            font-family: Graphik, sans-serif;
+            width: 100%;
+            height: 100px;
+            
             .logo-img {
                 width: 150px;
-                height: auto; /* Maintient le ratio de l'image */
+                height: auto; 
             }
         
             .search-icon {
                 cursor: pointer;
-                font-size: 24px; /* Ajuste la taille de l'icône */
-                margin: 0 20px; /* Marge à gauche et à droite */
+                font-size: 24px;
+                margin: 0 20px; 
             }
         
             .burger-menu {
@@ -45,7 +45,8 @@
     #header {
         display: flex;
         align-items: center; 
-        background-color: #f1f8fc;
+        background-color: $Background1;
+        font-family: Graphik, sans-serif;
 
     
         .logo-img {
@@ -61,7 +62,7 @@
 
             width: 500px;
             margin-left: 500px;
-            color:#00497c;
+            color:$bleuMarine;
             cursor: pointer;
             font-size: 30px; 
             

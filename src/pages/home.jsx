@@ -29,8 +29,8 @@ const Home = () => {
         <Header/>
         <main id="home">
          {/* Partie Comment trouver son artisan */}
+         <h1>Comment trouver mon artisan !</h1>
             <section className="tutorial">
-            <h1>Comment trouver mon artisan !</h1>
             <div className="etape">
                 <FontAwesomeIcon icon={fa1} className="number" />
                 <p>Choisir la catégorie d'artisanat dans le menu</p>
@@ -50,13 +50,13 @@ const Home = () => {
             </section>
 
             {/* Partie Top des 3 artisans */}
-            <section id="artisan">
+            <section id="artisan-home">
                  <h2>Le Top 3 des artisans</h2>
 
                 <div className="section">
                     {/* Bouton pour slider à gauche */}
                     <div className="slider">
-                        <button onClick={nextSlide}>
+                        <button className="button-home" onClick={nextSlide}>
                             <FontAwesomeIcon icon={faChevronLeft} />
                         </button>
                     </div>
@@ -77,7 +77,7 @@ const Home = () => {
 
                     {/* Bouton pour slider à droite */}
                     <div className="slider">
-                        <button onClick={prevSlide}>
+                        <button className="button-home" onClick={prevSlide}>
                             <FontAwesomeIcon icon={faChevronRight} />
                         </button>
                     </div>
