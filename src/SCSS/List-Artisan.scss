@@ -1,4 +1,4 @@
-@import "Varaibles.scss";
+@import "Variables.scss";
 
 // Format Mobile
 @media (max-width:932px) {
@@ -64,6 +64,7 @@
 
 // Format Desktop
 @media (min-width: 730px) {
+    
     #List-Artisan {
         display: flex;
         flex-direction: column;
