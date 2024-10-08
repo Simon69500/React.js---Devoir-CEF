@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes} from 'react-router-dom';
-
+import './SCSS/Variables.scss';
 
 import Home from "./pages/home.jsx";
 import List from "./pages/List-Artisan.jsx";
