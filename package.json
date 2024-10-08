@@ -2,6 +2,8 @@
   "name": "trouve-mon-artisan",
   "version": "0.1.0",
   "private": true,
+"homepage": "https://Simon69500.github.io/React.js",
+
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
@@ -19,14 +21,19 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.78.0",
+    "sass-loader": "^16.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,8 +54,13 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "react-scripts": "^5.0.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.1"
+  },
+  "engines": {
+    "node": "v20.x"
   }
 }
