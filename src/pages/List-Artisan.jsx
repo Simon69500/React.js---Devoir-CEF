@@ -54,7 +54,7 @@ const List = () => {
                         <Link
                         key={data.id}
                         to={`/artisan/${data.id}`}
-                        className={`list-artisan ${id === String(data.id) ? 'selected' : ''}`} // Ajout de la classe conditionnelle
+                        className={`list-artisan ${id === String(data.id) ? 'selected' : ''}`} 
                         id={data.id}
                     >
                         <div>

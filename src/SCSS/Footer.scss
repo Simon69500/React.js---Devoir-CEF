@@ -1,27 +1,22 @@
-#footer {
-    #footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        background-color:#82b864 ;
-        width: 100%;
-        height: 200px;
-        }
+@import "Variables.scss";
 
-    @media (max-width: 932px) {
+// Format Mobile
+    @media (max-width: 430px) {
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        background-color:#82b864 ;
-        width: 100%;
-        height: 200px;
+        #footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            font-family: Graphik, sans-serif;
+            background-color:$Background2 ;
+            width: 100%;
+            height: 200px;
+            }
 
-        .logo-img {
-            width: 150px;
-            height: 100px;
+        .logo-imgFooter {
+            width: 100px;
+            height: 80px;
             margin-top: 50px;
         }
     
@@ -30,8 +25,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        h4 {
+            margin-top: 0px;
+            color:$bleu ;
         }
-    
+        }
+        
         p {
             margin-top: 0;
         }
@@ -39,12 +39,81 @@
         .pages {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
+
+        h4 {
+            margin-top: 0px;
+            color:$bleu ;
+        }
+
         }
     
         .link{
             text-decoration:none;
-            color: black;
+            color: $bleuFonce;
         }
     }
+
+// Format Desktop
+@media (min-width: 730px) {
+
+    #footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        font-family: Graphik, sans-serif;
+        background-color:$Background2  ;
+        width: 100%;
+        height: 220px;
+        }
+
+    // Partie Logo
+    .logo-imgFooter {
+        width: 150px;
+        height: 100px;
+       
+    }
+    // Partie Adresse 
+    .adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+
+    p {
+        margin-top: 0;
+    }
+
+    h4 {
+        margin-top: 0px;
+        color:$bleu ;
+    }
+ }
+
+    // Partie Pages légales
+    .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 200px;
+    height: 200px;
+    padding-bottom: 20px;
+
+    .link{
+        text-decoration:none;
+        color: $bleuFonce;
+    }
+
+    h4 {
+        margin-bottom: 0px;
+        color:$bleu ;
+    }
+
+  }
+
 }

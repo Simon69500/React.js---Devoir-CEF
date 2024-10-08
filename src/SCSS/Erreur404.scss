@@ -1,0 +1,87 @@
+@import "Variables.scss";
+
+ //Formt Mobile
+ @media (max-width: 430px) {
+    .img-error {
+        text-align: center;
+        padding: 30px;
+    
+        .img-404 {
+            width: 350px;
+            height: 250px;
+        }
+    }
+    
+    .text-error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        font-family: Graphik, sans-serif;
+    
+        h2 {
+            color: $bleu;
+        }
+    
+        p {
+            padding: 5px;
+        }
+    }   
+    
+    .error-link {
+        padding: 10px;
+    
+        a {
+    
+            text-decoration: none;
+            padding: 5px;
+            color: $bleu;
+            font-size: large;
+        }
+    }
+ }
+
+// Format Desktop
+@media (min-width: 730px) {
+    .img-error {
+        text-align: center;
+        padding: 50px;
+    
+        .img-404 {
+            width: 350px;
+            height: 250px;
+        }
+    }
+    
+    .text-error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        font-family: Graphik, sans-serif;
+    
+        h2 {
+            color: $bleu;
+            font-size: xxx-large;
+            padding: 20px;
+        }
+    
+        p {
+            padding: 10px;
+        }
+    }   
+    
+    .error-link {
+        padding: 10px;
+    
+        a {
+    
+            text-decoration: none;
+            padding: 5px;
+            color: $bleu;
+            font-size: large;
+        }
+    }
+}

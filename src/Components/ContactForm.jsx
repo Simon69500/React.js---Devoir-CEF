@@ -58,7 +58,7 @@ const ContactForm = () => {
                     placeholder="Votre message..."
                 />
 
-                <button type="submit">Envoyer</button>
+                <button className="button-form" type="submit">Envoyer</button>
             </div>
         </form>
     );

@@ -59,12 +59,13 @@ const Artisan = () => {
                             </p>
 
                             <p className="text">
-                                <strong>Localisation : </strong>
+                                <strong>A propos : </strong>
                                 <span className="text-about"> {artisans.about}</span>
                             </p>
+
                            <ContactForm/>
 
-                           <a href={artisans.website} className="website">visite mon site</a>
+                           <a href={artisans.website} target="_blank"  rel="noreferrer" className="website">visite mon site</a>
                 </div>
             </div>
             <Footer/>

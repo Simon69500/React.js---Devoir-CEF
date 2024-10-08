@@ -16,21 +16,36 @@ const SearchModal = ({ isVisible, onSearch, onClose, filteredData }) => {
     onSearch(event.target.value.toLowerCase());
   };
 
+  const handleOutsideClick = (e) => {
+    if (e.target.classList.contains('search-modal') && typeof onClose === 'function') {
+      onClose(); 
+    }
+  };
+  
+
   if (!isVisible) {
     return null;
   }
 
   return (
-    <div className="search-modal">
-      <div className="search-modal-content">
+    <main className="search-modal" onClick={handleOutsideClick}>
+      <section className="search-modal-content">
+
         <button className="close-btn" onClick={onClose}>X</button>
+
         <input type="text" onChange={handleChange} placeholder="Rechercher un artisan..." />
         {filteredData.length > 0 && (
           <div className="search-results">
-            <ul>
+            <ul className='card'>
               {filteredData.map((data) => (
-                <li key={data.id} onClick={() => handleSelect(data.id)}>
-                  {data.name} - {data.specialty} - {data.location}
+                <li className='card-detail' key={data.id} onClick={() => handleSelect(data.id)}>
+                  <h3 className='title'>{data.name}</h3>
+                  <p className='text'>Spécialité :
+                    <span className='text-detail'>{data.specialty}</span>
+                    </p>
+                    <p className='text'>Ville :
+                      <span className='text-detail'>{data.location}</span>
+                      </p>
                 </li>
               ))}
             </ul>
@@ -39,8 +54,9 @@ const SearchModal = ({ isVisible, onSearch, onClose, filteredData }) => {
         {filteredData.length === 0 && (
           <p className="no-results">Aucun artisan trouvé</p>
         )}
-      </div>
-    </div>
+
+      </section>
+    </main>
   );
 };
 

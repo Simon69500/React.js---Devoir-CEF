@@ -1,17 +1,13 @@
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-
 import "../SCSS/Home.scss";
 import data from "../datas.json";
+
 import { useState } from "react";
 import { createStars } from "../fontAwesomeConfig";
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fa1, fa2, fa3, fa4 } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-
 
 
 const Home = () => {
@@ -33,8 +29,8 @@ const Home = () => {
         <Header/>
         <main id="home">
          {/* Partie Comment trouver son artisan */}
-            <div className="tutorial">
-            <h1>Comment trouver mon artisan !</h1>
+         <h1>Comment trouver mon artisan !</h1>
+            <section className="tutorial">
             <div className="etape">
                 <FontAwesomeIcon icon={fa1} className="number" />
                 <p>Choisir la catégorie d'artisanat dans le menu</p>
@@ -51,16 +47,16 @@ const Home = () => {
             <FontAwesomeIcon icon={fa4} className="number" />
                 <p>Une réponse sera apportée sous 48h</p>
             </div>
-            </div>
+            </section>
 
-            {/* Partie Trouve ton artisan */}
-            <div id="artisan">
+            {/* Partie Top des 3 artisans */}
+            <section id="artisan-home">
                  <h2>Le Top 3 des artisans</h2>
 
                 <div className="section">
                     {/* Bouton pour slider à gauche */}
                     <div className="slider">
-                        <button onClick={nextSlide}>
+                        <button className="button-home" onClick={nextSlide}>
                             <FontAwesomeIcon icon={faChevronLeft} />
                         </button>
                     </div>
@@ -68,8 +64,12 @@ const Home = () => {
                      {/* Affichage de l'entreprise actuelle */}
                      <div className="card">
                         <h3>{topArtisans[currentIndex].name}</h3>
-                        <p>Spécialisation : {topArtisans[currentIndex].specialty}</p>
-                        <p>Localisation : {topArtisans[currentIndex].location}</p>
+                        <p className="text">Spécialisation :
+                             <span className="text-detail">{topArtisans[currentIndex].specialty}</span>
+                             </p>
+                        <p className="text">Localisation :
+                            <span className="text-detail">{topArtisans[currentIndex].location}</span>
+                            </p>
                         <div className="rating">
                             {createStars(topArtisans[currentIndex].note)}
                         </div>
@@ -77,12 +77,12 @@ const Home = () => {
 
                     {/* Bouton pour slider à droite */}
                     <div className="slider">
-                        <button onClick={prevSlide}>
+                        <button className="button-home" onClick={prevSlide}>
                             <FontAwesomeIcon icon={faChevronRight} />
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
         <Footer/>
         </>
