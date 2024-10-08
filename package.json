@@ -2,12 +2,9 @@
   "name": "trouve-mon-artisan",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourappname.onrender.com",
+"homepage": "https://Simon69500.github.io/react.js",
+
   "dependencies": {
-    "react-scripts": "^5.0.1",
-    "resolve-url-loader": "^5.0.0",
-    "sass": "^1.78.0",
-    "sass-loader": "^16.0.1",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
@@ -24,6 +21,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.78.0",
+    "sass-loader": "^16.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.78.0",
