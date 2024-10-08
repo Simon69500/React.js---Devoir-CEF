@@ -29,10 +29,11 @@ const Home = () => {
     };
 
     return (
-        <div id="home">
-            <Header/>
+        <>
+        <Header/>
+        <main id="home">
          {/* Partie Comment trouver son artisan */}
-            <div id="tutorial">
+            <div className="tutorial">
             <h1>Comment trouver mon artisan !</h1>
             <div className="etape">
                 <FontAwesomeIcon icon={fa1} className="number" />
@@ -82,8 +83,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
-        </div>
+        </main>
+        <Footer/>
+        </>
     )
 }
 

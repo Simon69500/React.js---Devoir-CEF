@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import BurgerMenu from "./MenuBurger";
 import SearchModal from "../Components/SearchModal";
+
 import data from '../datas.json';
 import '../SCSS/Header.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from "../assets/img/Logo.png";
+import { NavLink} from 'react-router-dom';
 
 const Header = () => {
     const [filteredArtisans, setFilteredArtisans] = useState([]);
@@ -16,6 +19,7 @@ const Header = () => {
             setFilteredArtisans([]);
             return;
         }
+
         const filtered = data.filter((artisan) => 
             artisan.name.toLowerCase().includes(term.toLowerCase()) ||
             artisan.specialty.toLowerCase().includes(term.toLowerCase()) ||
@@ -38,17 +42,23 @@ const Header = () => {
     return (
         <header id="header">
             <div className="image">
-                <img src={Logo} alt="logo du site" className="logo-img" />
+
+               <NavLink to="/"> 
+                    <img src={Logo} alt="logo du site" className="logo-img" />
+               </NavLink> 
             </div>
+
             <div className="search-icon" onClick={toggleSearch}>
                 <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
             </div>
+            
             <SearchModal 
                 onSearch={handleChange} 
                 isVisible={isSearchVisible} 
                 onClose={closeSearch} 
                 filteredData={filteredArtisans} 
             />
+           
             <div className="burger-menu"> 
                 <BurgerMenu />
             </div>

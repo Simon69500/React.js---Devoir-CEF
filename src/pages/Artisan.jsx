@@ -5,58 +5,66 @@ import ContactForm from "../Components/ContactForm";
 import '../SCSS/Artisan.scss'
 
 import { createStars } from "../fontAwesomeConfig";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState} from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 
 const Artisan = () => {
     
     const {id} = useParams();
-    const [artisans] = useState(data); 
+    const [artisans, setArtisans] = useState(); 
 
-    const artisan = artisans.find(artisan => artisan.id === id); 
+    const navigate = useNavigate();
+    const handleBack = () => {
+        navigate('/List');
+    };
+
+    useEffect(()=> {
+        const selectArtisan = data.find((item) => item.id === id ) ;
+        setArtisans(selectArtisan);
+    }, [id]);
+
+    if (!artisans) {
+        return (
+            <div>
+                <p>Chargement de l'artisan en cours ...</p>
+                <button onClick={handleBack}>Retour a la liste des artisans</button>
+            </div>
+        )
+    };
+
+
 
     return (
         <div id="artisan">
             <Header/>
             <div className="main">
-            <h1>Mes Artisans</h1>
-                <div className="list-artisan">
-                    {artisans.length > 0 ? (
-                        artisans.map((artisan) => (
-                            <div className="card-artisan" key={artisan.id}>
-                                <h3>{artisan.name}</h3>
-                                <div className="rating">
-                                {createStars(artisan.note)}
-                                </div>
-                                <p className="Text-artisan">
-                                    <strong>Spécialité : </strong>
-                                    <span className="artisan-text">{artisan.specialty}</span>
-                                    </p>
-
-                                <p className="Text-artisan">
-                                    <strong>Ville : </strong>
-                                    <span className="artisan-text">{artisan.location}</span>
-                                    </p>
-
-                                <p className="Text-about">
-                                    <strong>A propos : </strong>
-                                    <span className="about-text">{artisan.about}</span>
-                                </p>
-
-                                
-                                <div className="formulaire">
-                                    <ContactForm/>
-                                </div>
-
-                                <a href={artisan.website} target="_blank" rel="noopener noreferrer" className="website">Visitez mon site</a>
+            <h1>Mon Artisans</h1>
+                <div className="artisan-detail">
+                    <h2>{artisans.name}</h2>
+                     
+                    <div className="rating">
+                                {createStars(artisans.note)}
                             </div>
-                        ))
-                    ) : (
-                        <p>Aucun Artisans trouvé.</p>
-                    )}
-                    
+
+                    <p className="text">
+                                <strong>spécialité : </strong>
+                                <span className="text-data">{artisans.specialty}</span>
+                            </p>
+
+                            <p className="text">
+                                <strong>Localisation : </strong>
+                                <span className="text-data"> {artisans.location}</span>
+                            </p>
+
+                            <p className="text">
+                                <strong>Localisation : </strong>
+                                <span className="text-about"> {artisans.about}</span>
+                            </p>
+                           <ContactForm/>
+
+                           <a href={artisans.website} className="website">visite mon site</a>
                 </div>
             </div>
             <Footer/>

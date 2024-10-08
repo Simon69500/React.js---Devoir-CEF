@@ -47,6 +47,14 @@
                     font-size: 18px;
                     font-weight: bold;
                 }
+
+        // Style pour l'artisan sélectionné
+        &.selected {
+            background-color: #e6f7ff; 
+            border-color: #cd2c2e;
+            box-shadow: 0 0 10px rgba(145, 3, 3, 0.5);
+        }
+
         }
 
         h3 {
