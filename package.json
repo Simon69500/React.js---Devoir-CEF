@@ -30,8 +30,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,8 +55,5 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.1"
-  },
-  "engines": {
-    "node": "v20.x"
   }
 }
