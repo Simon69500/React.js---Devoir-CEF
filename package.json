@@ -2,7 +2,6 @@
   "name": "trouve-mon-artisan",
   "version": "0.1.0",
   "private": true,
-"homepage": "https://Simon69500.github.io/React.js",
 
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
