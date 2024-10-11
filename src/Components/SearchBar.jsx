@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Barre de Recherche 
+
 const SearchBar = ({ searchTerm, onSearchChange }) => {
     
     const handleChange = (event) => {

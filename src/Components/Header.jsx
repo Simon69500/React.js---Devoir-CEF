@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from "../assets/img/Logo.png";
 import { NavLink} from 'react-router-dom';
 
+// Header
+
 const Header = () => {
     const [filteredArtisans, setFilteredArtisans] = useState([]);
     const [isSearchVisible, setSearchVisible] = useState(false);

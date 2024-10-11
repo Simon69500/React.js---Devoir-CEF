@@ -8,7 +8,7 @@ import { createStars } from "../fontAwesomeConfig";
 import { useEffect, useState} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-
+// Page pour prendre Contact avec l'artisan 
 
 const Artisan = () => {
     

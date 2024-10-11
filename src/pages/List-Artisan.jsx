@@ -9,6 +9,8 @@ import { createStars } from "../fontAwesomeConfig";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+// page de recherche des artisans , qui est lié au modal et a la fiche artisan , (code que je vais présenter pour le projet )
+
 const List = () => {
 
     const {id} = useParams();
@@ -37,6 +39,7 @@ const List = () => {
         }
     }, [id,filteredData]);
 
+// Rendu sur la page 
     return (
         <div id="List-Artisan">
             <Header/>

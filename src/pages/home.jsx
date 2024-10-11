@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fa1, fa2, fa3, fa4 } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
+// Page d'acceuil du site 
 
 const Home = () => {
 

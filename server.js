@@ -1,3 +1,5 @@
+// Serveur pour tester maildev , a lancer avant l'envoie du formulaire en local
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -19,7 +21,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Envoi de mail
+// Envoi de l'email
 app.post('/send', (req, res) => {
     const { name, objet, message } = req.body;
 

@@ -2,6 +2,8 @@ import React from 'react';
 import '../SCSS/SearchModal.scss'; 
 import { useNavigate } from 'react-router-dom';
 
+// Modal de recherche pour le Header
+
 const SearchModal = ({ isVisible, onSearch, onClose, filteredData }) => {
   const navigate = useNavigate();
 
