@@ -1,5 +1,6 @@
 @import "Variables.scss";
 
+// Format mobile
     @media (max-width: 430px) {
        
         .search-icon {
@@ -40,6 +41,7 @@
     }
 }
 
+//Format Desktop
 @media (min-width: 768px) {
 
     #header {

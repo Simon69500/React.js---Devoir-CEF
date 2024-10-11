@@ -1,6 +1,8 @@
 import { useState } from "react";
 import '../SCSS/ContactForm.scss';
 
+// Formulaire de Contact avec maildev
+
 const ContactForm = () => {
 
     const [name, setName] = useState('');

@@ -1,6 +1,7 @@
 @import "Variables.scss";
 
-@media (max-width:932px){
+// Format Mobile
+@media (max-width:430px){
   .search-bar {
     position: relative;
     width: 70%;
@@ -28,29 +29,33 @@
   }
 }
 
-.search-bar {
-  position: relative;
-  width: 70%;
-  margin-bottom: 20px;
-
-  input {
-    width: 100%;
-    padding: 12px 20px;               
-    font-size: 16px;                 
-    border: 2px solid #0074c7;         
-    border-radius: 25px;           
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    outline: none;                    
-    transition: all 0.3s ease;       
-
-    &:focus {
-      border-color: #82b864;         
-      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);  
+// Format Desktop
+@media (min-width: 950px) {
+  .search-bar {
+    position: relative;
+    width: 70%;
+    margin-bottom: 20px;
+  
+    input {
+      width: 100%;
+      padding: 12px 20px;               
+      font-size: 16px;                 
+      border: 2px solid #0074c7;         
+      border-radius: 25px;           
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      outline: none;                    
+      transition: all 0.3s ease;       
+  
+      &:focus {
+        border-color: #82b864;         
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);  
+      }
+  
+      &::placeholder {
+        color: #82b864;                   
+        font-style: italic;            
     }
-
-    &::placeholder {
-      color: #82b864;                   
-      font-style: italic;            
+  }
   }
 }
-}
+

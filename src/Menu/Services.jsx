@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { createStars } from "../fontAwesomeConfig";
 
+// Page du menu - Services
+
 const Service = () => {
 
     const {category} = useParams();

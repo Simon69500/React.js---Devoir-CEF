@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../SCSS/MenuBurger.scss";
 
+// Menu Burger pour la version mobile
+
 const BurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);

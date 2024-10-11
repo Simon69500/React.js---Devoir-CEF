@@ -6,11 +6,13 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons';
 
+// Fichier pour les icons et les notes artisans
+
 // Ajouter les icônes à la bibliothèque
 library.add(faMagnifyingGlass,
-    faChevronRight,faChevronLeft,
-     fa1, fa2, fa3, fa4,
-     solidStar, regularStar    
+    faChevronRight,faChevronLeft,   //chevrons pour le top 3 artisans 
+     fa1, fa2, fa3, fa4,           //numéro pour la page accueil 
+     solidStar, regularStar       // les étoiles pour les notes   
     );
 
 // Fonction pour créer des étoiles

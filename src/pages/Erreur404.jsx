@@ -4,6 +4,7 @@ import Erreur404 from "../assets/img/error-404.png";
 import "../SCSS/Erreur404.scss";
 import {NavLink } from "react-router-dom";
 
+// Page 404 Erreur 
 
 const Erreur = () => {
     return (
