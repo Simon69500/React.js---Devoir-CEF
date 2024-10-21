@@ -5,7 +5,7 @@ import "../SCSS/SearchBar.scss";
 import data from "../datas.json";
 import "../SCSS/List-Artisan.scss";
 
-import { createStars } from "../fontAwesomeConfig";
+import { createStars } from "../fontAwesomeConfig"; // j'importe ma fonction pour l'affichage de la note en étoile 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -13,18 +13,19 @@ import { Link, useParams } from "react-router-dom";
 
 const List = () => {
 
-    const {id} = useParams();
+    const {id} = useParams(); // permet d'acceder au parametre de URl 
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [filteredData, setFilteredData] = useState(data);
+    const [searchTerm, setSearchTerm] = useState("");        // valeur pour la barre de recherche 
+    const [filteredData, setFilteredData] = useState(data);  // valeur pour le tableau de donné data.json    
 
 // Filtrer les artisans en fonction du terme de recherche
     useEffect(() => {
-        const filtered = data.filter(data =>
-            data.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-            data.specialty.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-            data.location.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-            data.category.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+        const sanitizedSearchTerm = searchTerm.trim()
+        const filtered = data.filter(data =>   
+            data.name.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
+            data.specialty.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
+            data.location.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
+            data.category.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase())
         );
         setFilteredData(filtered);
     }, [searchTerm]);
@@ -74,7 +75,7 @@ const List = () => {
                             </p>
                             
                             <div className="rating">
-                                {createStars(data.note)}
+                                {createStars(data.note)}  {/* fonction createStars appelé pour affiché selon le resultat de data.note le nombre d'etoile pleine ou vide pour donner la note exact */}
                             </div>
                         </div>
                         </Link>    
