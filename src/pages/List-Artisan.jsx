@@ -24,8 +24,7 @@ const List = () => {
         const filtered = data.filter(data =>   
             data.name.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
             data.specialty.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
-            data.location.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase()) ||
-            data.category.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase())
+            data.location.toLocaleLowerCase().includes(sanitizedSearchTerm.toLocaleLowerCase())
         );
         setFilteredData(filtered);
     }, [searchTerm]);
