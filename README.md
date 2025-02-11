@@ -1,7 +1,8 @@
 # 🛠️ Trouve Ton Artisan
 
 **Trouve Ton Artisan** est une plateforme permettant aux particuliers de rechercher des artisans en région **Auvergne-Rhône-Alpes** et de les contacter facilement pour des prestations ou des demandes de devis.
-![trouve-ton-artisan](https://github.com/user-attachments/assets/dc1a69f4-f761-4172-9f9c-6a22880910e4)
+
+- ![trouve-ton-artisan](https://github.com/user-attachments/assets/dc1a69f4-f761-4172-9f9c-6a22880910e4)
 
 
 ---
