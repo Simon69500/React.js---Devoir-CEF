@@ -3,7 +3,13 @@
 // Format Mobile
     @media (max-width: 430px){
         #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             font-family: Graphik, sans-serif ;
+            width: 100%;
+            height: 100%;
 
             h1 {
                 color: $bleu;
@@ -19,8 +25,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
-            padding: 80px;
 
             .etape {
                 display: flex;
@@ -50,8 +54,9 @@
                     border-radius: 10%;
                     background-color:$Background1 ;
     
-                    width: 150px;
+                    width: 200px;
                     height: 150px;
+                    padding: 0px 5px;
     
                     display: flex;
                     justify-content: center;
