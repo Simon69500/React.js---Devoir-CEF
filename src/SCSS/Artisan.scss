@@ -22,7 +22,10 @@
             display: flex;
             flex-direction: column;
             text-align: center;
+            justify-content: space-evenly;
 
+            height: 100%;
+            width: 90%;
             background-color: $Background1;
             border: solid 3px $vert;
             border-radius: 10px;
